@@ -25,6 +25,12 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+app.get("/api/whoami", function (req, res) {
+  const ipAddress="::ffff:159.20.14.100";
+  const language="fr";
+  const software="Mac";
+  res.json({"ipaddress": ipAddress, "language": language,"software":software});
+});
 
 
 // listen for requests :)
